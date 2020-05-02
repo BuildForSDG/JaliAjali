@@ -1,47 +1,55 @@
 {
-  "name": "js-starter",
-  "version": "0.0.1",
-  "description": "A boilerplate for starting js code",
-  "keywords": [
-    "js-starter",
-    "boilerplate"
-  ],
-  "private": false,
+  "name": "JaliAjali",
+  "version": "0.1.0",
+  "private": true,
+  "author": {
+    "name": "Team-127: Build For SDG",
+    "email": "buildforsdg@andela.com"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "directories": {
     "test": "__tests__"
   },
-  "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:cover": "jest --coverage",
-    "lint": "eslint \"src/**/*.js\"",
-    "start": "parcel ./src/index.html"
-  },
-  "author": {
-    "name": "Build For SDG",
-    "email": "buildforsdg@andela.com"
-  },
-  "homepage": "https://github.com/BuildForSDG/js-starter#readme",
+  "homepage": "https://github.com/BuildForSDG/JaliAjali#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BuildForSDG/js-starter.git"
+    "url": "https://github.com/BuildForSDG/JaliAjali.git"
   },
   "bugs": {
-    "url": "https://github.com/BuildForSDG/js-starter/issues"
+    "url": "https://github.com/BuildForSDG/JaliAjali/issues"
   },
   "license": "MIT",
-  "dependencies": {},
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "register-service-worker": "^1.7.1",
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.6",
+    "vuex": "^3.1.3"
+  },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "babel-jest": "^25.4.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.1.0",
+    "@vue/cli-plugin-babel": "~4.3.0",
+    "@vue/cli-plugin-eslint": "~4.3.0",
+    "@vue/cli-plugin-pwa": "~4.3.0",
+    "@vue/cli-plugin-router": "~4.3.0",
+    "@vue/cli-plugin-unit-jest": "~4.3.0",
+    "@vue/cli-plugin-vuex": "~4.3.0",
+    "@vue/cli-service": "~4.3.0",
+    "@vue/eslint-config-airbnb": "^5.0.2",
+    "@vue/test-utils": "1.0.0-beta.31",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
-    "jest": "^25.4.0",
-    "parcel-bundler": "^1.12.4"
+    "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [
     "last 1 Chrome versions"

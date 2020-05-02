@@ -1,7 +1,17 @@
 module.exports = {
-  moduleFileExtensions: ['js', 'json'],
-  rootDir: '__tests__',
-  testRegex: ['.spec.js$', '.test.js$'],
-  coverageDirectory: './coverage',
-  testEnvironment: 'node',
+  preset: '@vue/cli-plugin-unit-jest',
+  collectCoverage: true,
+  coverageDirectory: 'coverage',
+  collectCoverageFrom: [
+    'src/**/*.{js,vue}',
+    '!src/*.js',
+    '!src/**/*.spec.js',
+    '!**/node_modules/**'
+  ],
+  coveragePathIgnorePatterns: [
+    // '/node_modules/',
+    // 'src/components/index.js',
+    // 'src/plugins/index.js',
+    // 'src/init.js'
+  ]
 };
