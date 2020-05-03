@@ -50,8 +50,5 @@
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
-  },
-  "browserslist": [
-    "last 1 Chrome versions"
-  ]
+  }
 }
