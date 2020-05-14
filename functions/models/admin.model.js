@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const uuid4 = require('uuid/v4');
+const uniqueValidator = require('mongoose-unique-validator');
 
 const schema = mongoose.Schema;
 
@@ -11,14 +12,14 @@ const adminSchema = new schema(
       default: uuid4(),
       unique: true
     },
-    firstName: {
+    first_name: {
       type: String,
-      required: false,
+      required: true,
       unique: false
     },
-    lastName: {
+    last_name: {
       type: String,
-      required: false,
+      required: true,
       unique: false
     },
     email: {
@@ -30,21 +31,21 @@ const adminSchema = new schema(
       type: String,
       required: true
     },
-    isAdmin: {
+    is_admin: {
       type: Boolean,
       required: false,
       default: false
     },
-    resetPasswordToken: {
+    reset_password_token: {
       type: String
     },
-    resetPasswordExpires: {
+    reset_password_expires: {
       type: Date
     },
-    verifyToken: {
+    verify_token: {
       type: String
     },
-    isVerified: {
+    is_verified: {
       type: Boolean,
       default: false
     }
