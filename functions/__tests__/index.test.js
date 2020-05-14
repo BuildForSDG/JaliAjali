@@ -1,6 +1,6 @@
-const request = require('supertest');
-// const app = require('../index');
 import {app} from "../index";
+
+const request = require('supertest');
 
 describe('Post Endpoints', () => {
   it('Should return my name', async () => {
