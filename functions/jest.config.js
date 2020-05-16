@@ -1,6 +1,7 @@
 module.exports ={
 
   verbose: true,
-  testEnvironment: 'node'
+  testEnvironment: 'node',
+  preset: "@shelf/jest-mongodb"
 
 }
