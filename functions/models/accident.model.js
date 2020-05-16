@@ -20,8 +20,7 @@ const accidentSchema = new schema(
     },
     deviceType: {
       type: String,
-      required: true,
-      unique: true
+      required: true
     },
     reportedTime: {
       type: Date,
