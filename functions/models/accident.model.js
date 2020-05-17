@@ -1,28 +1,25 @@
 const mongoose = require('mongoose');
-const uuid = require('uuid/v4');
 const uniqueValidator = require('mongoose-unique-validator');
 
 
 const schema = mongoose.Schema; 
-
-
 const accidentSchema = new schema(
   {
     case_id: {
       type: String,
-      default: uuid(),
       unique: true
     },
     no_of_victims: {
       type: String,
       required: true,
       unique: false
-    },
-    deviceType: {
+    },  
+    device_type: {
       type: String,
-      required: true
+      required: true,
+      unique:false
     },
-    reportedTime: {
+    reported_time: {
       type: Date,
       required: true
     },
@@ -43,6 +40,10 @@ const accidentSchema = new schema(
     weather_type: {
       type: String,
       required: false
+    },
+    description:{
+      type:String,
+      required:false
     }
   },
   {

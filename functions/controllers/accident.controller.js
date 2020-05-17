@@ -1,18 +1,25 @@
+const uuid = require('uuid/v4');
+
 const Accident = require('../models/accident.model');
+
 
 
 module.exports = {
  async createAccidentCase(req,res){
-   const {no_of_victims, deviceType , location } =  req.body;
+   const {no_of_victims, device_type , location , latitude , longitude , description } =  req.body;
 
   const newAccident = new Accident({
+    description,
+    case_id: uuid(),
     no_of_victims,
-    deviceType,
+    device_type,
     reportedTime: Date.now(),
     location: {
-      submitted_location: location
+      submitted_location: location,
+      latitude , 
+      longitude
         }
-    });
+    }); 
 
   try {
 
