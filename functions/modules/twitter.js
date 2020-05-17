@@ -26,14 +26,17 @@ class Tweet {
     // }
 
     async follow(){
-      try {
-        let {data} = await T.postFriendshipsCreate({screen_name: 'lewismunyi'});
+      /*try {
+        let data = await T.postFriendshipsCreate({screen_name: 'lewismunyi'});
         console.log(data);
         return data;
-      } catch (e) {
-        console.log(e.message);
-        return e.message;
-      }
+      } catch (e) {console.log(e._response);
+        throw e._response;
+      }*/
+      return await T.postFriendshipsCreate({screen_name: 'lewismunyi'})
+        .catch((e)=>{
+          throw e._response;
+        });
       // await T.postFriendshipsCreate({screen_name: 'naderdabit'})
       //   .then((data)=>{
       //     console.log(data);
