@@ -11,7 +11,7 @@ const Tweet = require('./modules/twitter');
 const app = express();
 dotenv.config({path: path.resolve(__dirname + '../env')})
 
-mongoose.connect("mongodb://localhost:27017/jaliAjali", {
+mongoose.connect(process.env.MONGO_STRING, {
       useNewUrlParser: true,
       useCreateIndex: true,
       useFindAndModify: false,
