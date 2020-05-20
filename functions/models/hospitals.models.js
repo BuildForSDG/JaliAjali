@@ -14,7 +14,6 @@ const hospitalSchema = new schema(
     },
     registration_number:{
       type:String,
-      required: false
     },
     keph_level:{
       type:String

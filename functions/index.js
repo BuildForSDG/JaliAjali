@@ -11,7 +11,7 @@ const Tweet = require('./modules/twitter');
 const app = express();
 dotenv.config({path: path.resolve(__dirname + '../env')})
 
-mongoose.connect(process.env.MONGO_STRING, {
+mongoose.connect(process.env.MONGO_URL, {
       useNewUrlParser: true,
       useCreateIndex: true,
       useFindAndModify: false,
