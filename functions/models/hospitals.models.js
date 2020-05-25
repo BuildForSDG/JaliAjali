@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const uuid = require('uuid/v4');
+const uniqueValidator = require('mongoose-unique-validator');
 
 const schema = mongoose.Schema; 
 
@@ -9,11 +9,11 @@ const hospitalSchema = new schema(
     name:{
       type:String,     
     },
-    registration_number:{
-      type:String
-    },
     officialName:{
       type:String
+    },
+    registration_number:{
+      type:String,
     },
     keph_level:{
       type:String
