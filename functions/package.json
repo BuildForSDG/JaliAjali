@@ -13,7 +13,7 @@
     "test:watch": "jest --watch"
   },
   "engines": {
-    "node": "10"
+    "node": "12"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
