@@ -1,22 +1,24 @@
-require('dotenv').config();
-const Twit = require('promised-twit');
+// // =========================================================================================
+// require('dotenv').config();
+// const Twit = require('promised-twit');
 
-const T = new Twit({
-    consumer_key: process.env.CONSUMER_KEY,
-    consumer_secret: process.env.CONSUMER_SECRET,
-    access_token: process.env.ACCESS_TOKEN,
-    access_token_secret: process.env.ACCESS_TOKEN_SECRET,
-  });
+// const T = new Twit({
+//     consumer_key: process.env.CONSUMER_KEY,
+//     consumer_secret: process.env.CONSUMER_SECRET,
+//     access_token: process.env.ACCESS_TOKEN,
+//     access_token_secret: process.env.ACCESS_TOKEN_SECRET,
+//   });
 
-class Tweet {
-    constructor(){
-        this.name = "Hello Tweet!"
-    }
+// class Tweet {
+//     constructor(){
+//         this.name = "Hello Tweet!"
+//     }
 
-    sayHi(){
-        return this.name
-    }
+//     sayHi(){
+//         return this.name
+//     }
 
+    // ====================================================================================
     // getFollowers(){
     //     T.get('followers/list', { screen_name: 'lewismunyi' }, (err, data, response) => {
     //         if(!err){
@@ -25,7 +27,7 @@ class Tweet {
     //       });
     // }
 
-    async follow(){
+   // async follow(){
       /*try {
         let data = await T.postFriendshipsCreate({screen_name: 'lewismunyi'});
         console.log(data);
@@ -33,10 +35,14 @@ class Tweet {
       } catch (e) {console.log(e._response);
         throw e._response;
       }*/
-      return await T.postFriendshipsCreate({screen_name: 'lewismunyi'})
-        .catch((e)=>{
-          throw e._response;
-        });
+      // ========================================================================
+      // PLEASE UNCOMMENT THE FOLLOWING SECTION
+      //========================================================================
+      // return await T.postFriendshipsCreate({screen_name: 'lewismunyi'})
+      //   .catch((e)=>{
+      //     throw e._response;
+      //   });
+        //==============================================================================
       // await T.postFriendshipsCreate({screen_name: 'naderdabit'})
       //   .then((data)=>{
       //     console.log(data);
@@ -54,8 +60,8 @@ class Tweet {
       //   }
       // });
       // console.log(err.message);
-      // return text;
-    }
-}
+//       // return text;
+//     }
+// }
 
-module.exports = Tweet;
+// module.exports = Tweet;

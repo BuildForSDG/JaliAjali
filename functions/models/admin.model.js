@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const uuid4 = require('uuid/v4');
+const uuid4 = require('uuid');
 const uniqueValidator = require('mongoose-unique-validator');
 
 const schema = mongoose.Schema;
